@@ -1,3 +1,19 @@
 body {
-    background:lightblue;
+    background-color:lightblue;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+button {
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: rgb(226, 44, 226);
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
 }
