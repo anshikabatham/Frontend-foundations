@@ -17,8 +17,8 @@ function studentdata(){
     students.splice(1,2);
     console.log("splice():",students);
 
-    students.slice(2,3);
-    console.log("slice():",students);
+    //students.slice(2,3);
+    //console.log("slice():",students);
 }
 
 studentdata();
