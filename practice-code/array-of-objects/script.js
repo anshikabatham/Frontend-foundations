@@ -90,30 +90,47 @@
 // console.log(obj.Name);
 
 //constructor
-//function constructor
-function funcons(name,age,marks){
-   this.name=name;
-   this.age=age;
-   this.marks=marks;//this refer to new object
-}
-let s1=new funcons("anshika",20,97);
-let s2=new funcons("anshi",22,78);
+//function constructor khud se he initialize hota h
+// function funcons(name,age,marks){
+//    this.name=name;
+//    this.age=age;
+//    this.marks=marks;//this refer to new object
+// }
+// let s1=new funcons("anshika",20,97);
+// let s2=new funcons("anshi",22,78);
 
-console.log(s1);
-console.log(s2);
+// console.log(s1);
+// console.log(s2);
 
-class main{
-   constructor(){
-      console.log("Class Constructor called");
-   }
-}
-//let s3=new main();
+// class main{
+//    constructor(){
+//       console.log("Class Constructor called");
+//    }
+// }
+// //let s3=new main();
+// //deep and shallow
+// //oops extend keyword
+// class child extends main{
+//    constructor(){
+//       super();
+//       console.log("child also constructor called");
+//    }
+// }
+// let s3=new child();
+//length,toUppercase,lowercase,charAt,includes,
+// startwith,endwith,,replace,split,concat,indexof
 
-//oops extend keyword
-class child extends main{
-   constructor(){
-      super();
-      console.log("child also constructor called");
-   }
-}
-let s3=new child();
+let str="HELL0 WORLD! I am Anshika Batham."
+
+
+console.log(str.length);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.charAt(6));
+console.log(str.includes("welcome"));
+console.log(str.startsWith("Hello"));
+console.log(str.endsWith("AI!"));
+console.log(str.replace("Hello", "Hi"));
+console.log(str.split(" "));
+
+console.log(str.indexOf("I"));
