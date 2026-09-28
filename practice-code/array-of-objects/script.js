@@ -120,17 +120,28 @@
 //length,toUppercase,lowercase,charAt,includes,
 // startwith,endwith,,replace,split,concat,indexof
 
-let str="HELL0 WORLD! I am Anshika Batham."
+// let str="HELL0 WORLD! I am Anshika Batham."
 
 
-console.log(str.length);
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str.charAt(6));
-console.log(str.includes("welcome"));
-console.log(str.startsWith("Hello"));
-console.log(str.endsWith("AI!"));
-console.log(str.replace("Hello", "Hi"));
-console.log(str.split(" "));
+// console.log(str.length);
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(str.charAt(6));
+// console.log(str.includes("welcome"));
+// console.log(str.startsWith("Hello"));
+// console.log(str.endsWith("AI!"));
+// console.log(str.replace("Hello", "Hi"));
+// console.log(str.split(" "));
 
-console.log(str.indexOf("I"));
+// console.log(str.indexOf("I"));
+// //DOM
+//queryselector,queryselectorall
+//get elementary
+
+
+
+//sep28/2026
+//classlist.add.remove,replace,toggle,conatains-return true false
+let h2text=document.querySelector("h2");
+h2text.classlist.add("customcss2")
+console.log(h2text.classlist.contains("customcss2"))
