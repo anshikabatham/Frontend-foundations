@@ -52,3 +52,10 @@ console.log(firstHeading.nextElementSibling);
 console.log(firstHeading.previousElementSibling);
 console.log(document.body.firstElementChild);
 console.log(document.body.lastElementChild);
+
+let inputholder=document.getElementById("inputholder");
+let form=document.getElementById("formsubmit");
+form.addEventListener("submit",(e)=>){
+    e.preventDefault();
+    
+}
