@@ -1,62 +1,37 @@
-// 1. Form tag create kiya
-let form = document.createElement("form");
+let myForm=document.createElement("form");
+let nameinput=document.createElement("input");
+nameinput.id="name";
+nameinput.placeholder="Name";
+nameinput.required=true;
 
-// Form inputs ka data array me banaya taaki forEach se jaldi ban jaye
-let formFields = [
-    { type: "text", id: "name", placeholder: "Student Name" },
-    { type: "number", id: "age", placeholder: "Student Age" },
-    { type: "text", id: "course", placeholder: "Course" },
-    { type: "password", id: "password", placeholder: "Password" },
-    { type: "password", id: "confirmPassword", placeholder: "Confirm Password" }
-];
+let ageInput=document.createElement("input");
+ageInput.type="number";
+ageInput.id="age";
+ageInput.placeholder="Age";
+ageInput.required=true;
 
-// 2. Loop lagakar saare inputs banaye aur form me append kiye
-formFields.forEach(function(field) {
-    let input = document.createElement("input");
-    input.type = field.type;
-    input.id = field.id;
-    input.placeholder = field.placeholder;
-    input.required = true;
-    
-    form.appendChild(input);
-    
-    // Nayi line ke liye do <br> tags lagaye
-    form.appendChild(document.createElement("br"));
-    form.appendChild(document.createElement("br"));
-});
+let courseInput=document.createElement("input");
+courseInput.id="course";
+courseInput.placeholder="Course";
+courseInput.required=true;
 
-// 3. Submit button banaya
-let submitBtn = document.createElement("button");
-submitBtn.type = "submit";
-submitBtn.textContent = "Submit Details";
-form.appendChild(submitBtn);
+let btn=document.createElement("button");
+btn.textContent="Submit";
+btn.type="submit";
 
-// 4. Form ko body me append kiya
-document.body.appendChild(form);
+myForm.append(nameinput,ageInput,courseInput,btn);
+document.body.appendChild(myForm);
+let msg=document.createElement("h3");
+document.body.appendChild(msg);
 
-// Output dikhane ke liye ek h3 tag banaya
-let message = document.createElement("h3");
-document.body.appendChild(message);
-
-// 5. Form par Event Listener lagaya
-form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Page reload rokne ke liye
-
-    // Passwords ki values nikaali
-    let pass = document.getElementById("password").value;
-    let confPass = document.getElementById("confirmPassword").value;
-
-    // Checks lagaye
-    if (pass !== confPass) {
-        message.textContent = "Error: Passwords do not match!";
-        message.style.color = "red";
-    } else {
-        message.textContent = "Success: Form submitted!";
-        message.style.color = "green";
-        
-        console.log("--- Form Data ---");
-        console.log("Name:", document.getElementById("name").value);
-        console.log("Age:", document.getElementById("age").value);
-        console.log("Course:", document.getElementById("course").value);
+myForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    let age=document.getElementById("age").value;
+    if(age<18){
+        msg.textContent="Error:Age is not right";
+        msg.style.color="red";
+    }else{
+        msg.textContent="Success";
+        msg.style.color="green";
     }
 });
